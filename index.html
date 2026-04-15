@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Budget Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Budget Planner</h1>
+    <p class="subtitle">
+      Plan your income, track expenses, and compare your budget to a smart monthly recommendation.
+    </p>
+
+    <div class="card">
+      <h2>Monthly Income</h2>
+      <div class="income-row">
+        <input
+          type="number"
+          id="income-input"
+          placeholder="Enter monthly income"
+        />
+        <button onclick="setIncome()">Set Income</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Add Expense</h2>
+      <div class="input-row">
+        <input
+          type="text"
+          id="expense-name"
+          placeholder="Expense name"
+        />
+
+        <input
+          type="number"
+          id="expense-amount"
+          placeholder="Amount"
+        />
+
+        <select id="expense-category">
+          <option value="Bills">Bills</option>
+          <option value="Gas">Gas</option>
+          <option value="Groceries">Groceries</option>
+          <option value="Savings">Savings</option>
+          <option value="Fun">Fun</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <button onclick="addExpense()">Add Expense</button>
+      </div>
+    </div>
+
+    <div class="summary-grid">
+      <div class="summary-card">
+        <p class="summary-label">Monthly Income</p>
+        <h3 id="income-display">$0.00</h3>
+      </div>
+
+      <div class="summary-card">
+        <p class="summary-label">Total Expenses</p>
+        <h3 id="expenses-display">$0.00</h3>
+      </div>
+
+      <div class="summary-card">
+        <p class="summary-label">Money Left</p>
+        <h3 id="remaining-display">$0.00</h3>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Recommended Budget Plan</h2>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <p class="summary-label">Needs (50%)</p>
+          <h3 id="needs-display">$0.00</h3>
+          <p class="plan-text">Bills, groceries, gas, essentials</p>
+        </div>
+
+        <div class="plan-card">
+          <p class="summary-label">Fun (30%)</p>
+          <h3 id="fun-display">$0.00</h3>
+          <p class="plan-text">Eating out, shopping, entertainment</p>
+        </div>
+
+        <div class="plan-card">
+          <p class="summary-label">Savings (20%)</p>
+          <h3 id="savings-display">$0.00</h3>
+          <p class="plan-text">Emergency fund or future goals</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Actual Category Totals</h2>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <p class="summary-label">Needs Spent</p>
+          <h3 id="actual-needs-display">$0.00</h3>
+          <p class="plan-text">Bills + groceries + gas</p>
+        </div>
+
+        <div class="plan-card">
+          <p class="summary-label">Fun Spent</p>
+          <h3 id="actual-fun-display">$0.00</h3>
+          <p class="plan-text">Fun category spending</p>
+        </div>
+
+        <div class="plan-card">
+          <p class="summary-label">Savings Added</p>
+          <h3 id="actual-savings-display">$0.00</h3>
+          <p class="plan-text">Savings category total</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Expenses</h2>
+      <ul id="expense-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
