@@ -6,12 +6,19 @@
   <title>Smart Budget Planner</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="container">
-    <h1>Smart Budget Planner</h1>
-    <p class="subtitle">
-      Plan your income, track expenses, and compare your spending to a smart 50/30/20 monthly budget.
-    </p>
+    <div class="top-bar">
+      <div>
+        <h1>Smart Budget Planner</h1>
+        <p class="subtitle">
+          Track income, expenses, and compare your spending to a smart 50/30/20 monthly budget.
+        </p>
+      </div>
+
+      <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </div>
 
     <div class="card">
       <h2>Monthly Income</h2>
@@ -60,6 +67,7 @@
 
     <div class="card">
       <h2>Recommended Budget Plan</h2>
+
       <div class="plan-grid">
         <div class="plan-card">
           <p class="summary-label">Needs 50%</p>
@@ -83,6 +91,7 @@
 
     <div class="card">
       <h2>Actual Category Totals</h2>
+
       <div class="plan-grid">
         <div class="plan-card">
           <p class="summary-label">Needs Spent</p>
@@ -100,6 +109,30 @@
           <p class="summary-label">Savings Added</p>
           <h3 id="actual-savings-display">$0.00</h3>
           <p class="plan-text">Savings category total</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Expense Breakdown</h2>
+
+      <div class="chart-wrap">
+        <div class="chart">
+          <div class="chart-bar bills" id="bar-bills"></div>
+          <div class="chart-bar gas" id="bar-gas"></div>
+          <div class="chart-bar groceries" id="bar-groceries"></div>
+          <div class="chart-bar savings" id="bar-savings"></div>
+          <div class="chart-bar fun" id="bar-fun"></div>
+          <div class="chart-bar other" id="bar-other"></div>
+        </div>
+
+        <div class="chart-labels">
+          <span>Bills</span>
+          <span>Gas</span>
+          <span>Groceries</span>
+          <span>Savings</span>
+          <span>Fun</span>
+          <span>Other</span>
         </div>
       </div>
     </div>
