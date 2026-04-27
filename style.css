@@ -14,8 +14,16 @@ body {
 }
 
 .container {
-  max-width: 980px;
+  max-width: 850px;
   margin: 0 auto;
+  padding: 32px;
+  border-radius: 28px;
+  background: rgba(255, 250, 244, 0.75);
+  border: 1px solid rgba(120, 90, 60, 0.12);
+  box-shadow:
+    0 20px 60px rgba(62, 47, 38, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(14px);
 }
 
 h1 {
@@ -268,4 +276,64 @@ button:hover {
   .plan-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.clear-btn {
+  background: #7a3e2f;
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.empty-message {
+  color: #777;
+  margin-top: 1rem;
+}
+
+#expense-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+#expense-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background: #fffaf5;
+  border: 1px solid #ead8c8;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+}
+
+#expense-list p {
+  margin: 0.3rem 0 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.expense-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.expense-actions button {
+  background: #b85c4a;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
 }
