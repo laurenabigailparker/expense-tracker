@@ -1,6 +1,6 @@
 # Budget Planner & Expense Tracker
 
-A smart budget planning application that helps users track expenses, manage income, and compare spending against recommended budget allocations.
+A responsive budgeting app that tracks income, expenses, and category spending with real-time updates. Includes persistent data storage using localStorage, dynamic chart visualization, and dark mode support.
 
 ## Features
 - Add and delete expenses
@@ -40,8 +40,6 @@ The app calculates:
 - Structuring UI into reusable sections
 - Improving user experience with visual feedback
 
-## Future Improvements
-- Local storage for saving data
-- Custom budget percentages
-- Charts and data visualization
-- Monthly tracking and history
+Tech:
+
+HTML • CSS • JavaScript • localStorage
